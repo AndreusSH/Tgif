@@ -1,0 +1,16 @@
+img{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.navbar{
+    margin: 10px;
+}
+
+.nav > .active > a { 
+    background-color: grey ; 
+    color: black;
+}
+.nav-item>a:hover {
+    color: black;
+}
