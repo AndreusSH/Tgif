@@ -1,4 +1,6 @@
-img{
+
+
+    img{
     margin-left: 20px;
     margin-top: 20px;
 }
@@ -14,3 +16,17 @@ img{
 .nav-item>a:hover {
     color: black;
 }
+
+#image-home{
+    margin-top: 180px;
+}
+body {
+    font-family: "Special Elite", cursive;
+ }
+
+ footer{
+    margin: 80px 20px 80px 20px;
+    
+     
+     
+ }
