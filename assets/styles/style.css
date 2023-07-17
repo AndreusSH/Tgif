@@ -20,6 +20,13 @@
 #image-home{
     margin-top: 180px;
 }
+
+.col-4{
+    text-align: right;
+    padding-right: 0%;
+     
+}
+
 body {
     font-family: "Special Elite", cursive;
  }
