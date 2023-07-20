@@ -2,17 +2,12 @@ const url = "./json/senate.json";
 const url_2 = "./json/congress.json";
 let first_name;
 let selected_party;
-//let target;
-//let resultElement;
 let data;
 let data_filtered;
 let newArr = [];
 let checked_arr = ['R','I','D'];
 let filtered_array = [];
  
-
- 
-
  
  //fetch data from Json
 
@@ -34,9 +29,7 @@ let filtered_array = [];
 //buildtable
 
 const buildTable =  (arr) => {
-  //console.log(arr.length);
-  //const data = await fetchData();
-  //console.log("----------------------" + object);
+ 
   document.getElementById("header").innerHTML = ""; 
    let table = document.getElementById("header");
   console.log(arr)
@@ -44,10 +37,8 @@ const buildTable =  (arr) => {
 
 //loop through all members of the chamber or senate
 for (let i = 0 ; i < arr.length; i++){
-  //console.log(object[i]);
-   // stampa template
-   console.log(" ----------- >>>>" + arr.length)
-  let row = table.insertRow() // Add a new row to the table
+   
+   let row = table.insertRow() // Add a new row to the table
 
   // Add cells to the new row
   let name = row.insertCell(0);
@@ -55,8 +46,7 @@ for (let i = 0 ; i < arr.length; i++){
   let state = row.insertCell(2);
   let years_office = row.insertCell(3);
   let votes = row.insertCell(4);
- // if (obj.party == "R"){
-    name.innerHTML = arr[i].first_name;
+     name.innerHTML = arr[i].first_name;
     party.innerHTML = arr[i].party;
     state.innerHTML = arr[i].state;
     years_office.innerHTML = arr[i].seniority;
@@ -78,23 +68,19 @@ for (let i = 0; i < elements.length; i++) {
     newArr = data.results[0].members;
 
     if(event.target.checked){
-      //console.log("value is checked " + event.target.value);
-      checked_arr.push(event.target.value);
-      //console.log(checked_arr);
-      filtered_array = newArr.filter((element) => checked_arr.includes(element.party));
+       checked_arr.push(event.target.value);
+       filtered_array = newArr.filter((element) => checked_arr.includes(element.party));
  
 
     }
     
     else if (!event.target.checked){
       checked_arr = checked_arr.filter((element) => element !== event.target.value);
-      //console.log(checked_arr);
-
-      //console.log("value is NOT checked " + event.target.value);
-      filtered_array = newArr.filter((element) => checked_arr.includes(element.party));
+ 
+       filtered_array = newArr.filter((element) => checked_arr.includes(element.party));
  
     }
-    buildTable(filtered_array);
+        buildTable(filtered_array);
 
     });
 
@@ -103,16 +89,11 @@ for (let i = 0; i < elements.length; i++) {
 }
       
  
-    //getFirstName();
-    //click();
-    //buildTable();
+  
      data = await fetchData();
-    //console.log(data); 
-    
-    //let checkboxes = filter();
+     
       buildTable(data.results[0].members);
-    //filter();
-
+ 
    
  
   
