@@ -1,4 +1,4 @@
-const states = {
+export const states = {
     "AL": "Alabama",
     "AK": "Alaska",
     "AS": "American Samoa",
@@ -60,4 +60,4 @@ const states = {
     "WY": "Wyoming"
 }
 
-console.log(states);
+ 
