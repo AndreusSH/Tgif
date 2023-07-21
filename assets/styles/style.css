@@ -37,3 +37,14 @@ body {
      
      
  }
+ .dropdown-menu {
+    max-height: 200px; /* Height of dropdown menu */
+    overflow-y: auto;
+  }
+
+  #email{
+    text-align: right;
+    margin-top: 30px;
+    padding-right: 30px;
+     
+  }
