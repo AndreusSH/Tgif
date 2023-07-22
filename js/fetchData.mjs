@@ -6,56 +6,13 @@ let data;
 let newArr = [];
  
 let url = "";
-let state_key = "";
 let statistics = {};
 
 
-import {states} from './states.mjs';
+
 import{buildTable} from './buildTable.mjs';
-import {filterByState, filterByParty} from './filter.mjs';
+import { filterByParty} from './filter.mjs';
 
-
- 
-//populate dropdown
-function populateDropdown() {
-  document.getElementById('states').innerHTML= "";
- 
-   let dropdownMenu = document.getElementById('states');
-   const entries = Object.entries(states);
-    for (const [key,value] of entries) {
-     const option = document.createElement('p');
-  
-    option.classList.add('dropdown-item');// this value is important 
-    
-    option.textContent = key + "  " + value;
-
-   
-     //console.log(dropdownMenu)
-
-     dropdownMenu.appendChild(option);
-     //everytime I choose a state will be selected the senators from the
-     option.addEventListener('click',function(){
-    
-     state_key = key;
-     
-  
-      // I call the function to filter and pass the Key of the object I have
-      filterByState(state_key);
-     
-
-       //filter representatives by state
-      
-     })
-  }
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  const dropdownButton = document.getElementById('dynamicDropdown');
-  dropdownButton.addEventListener('click', function () {
-    console.log('does it work?')
-    populateDropdown();
-  });
-});
 
 
 
@@ -86,15 +43,12 @@ else if(currentURL.includes("chamber=senate") || currentURL.includes("members.ht
   try {
     const response = await fetch(url);
     const data = await response.json();
-     //console.log(statistics);
-     return data;
+      return data;
      
   } catch (error) {
     console.log(error);
   }
 };
-
-
 
 
 //dobbiamo pensare meglio a come fare check ed uncheck
@@ -112,7 +66,5 @@ for (let i = 0; i < elements.length; i++) {
 
  
       data = await fetchData();
-      //console.log(newArr);
       export {data};
-      export {state_key};
       buildTable(data.results[0].members);

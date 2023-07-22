@@ -2,7 +2,9 @@ let checked_arr = ['R','I','D'];
 let newArr = [];
 
 import{buildTable} from './buildTable.mjs';
-import {data, state_key} from './fetchData.mjs';
+import {data} from './fetchData.mjs';
+import { state_key } from './dropDown.mjs';
+
 
  
 
@@ -58,4 +60,18 @@ export const filterByState = (k = "") =>{
   
     }
    
-   
+   //count the Republicans, democrats and Independent
+
+let n_republican;
+let n_democrat;
+let n_independent;
+
+const countParties = () => {
+  n_republican = data.results[0].members.filter((el) => el.party == "R").length;
+  n_democrat = data.results[0].members.filter((el) => el.party == "D").length;
+  n_independent = data.results[0].members.filter((el) => el.party == "I").length;
+
+}
+
+ 
+

@@ -1,3 +1,5 @@
+
+
 //buildtable function creates a table with senators and congressmen data
 
 export const buildTable =  (arr) => {
@@ -39,3 +41,4 @@ export const buildTable =  (arr) => {
   
   }
   
+ 
