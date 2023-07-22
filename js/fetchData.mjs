@@ -56,17 +56,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-//switch between senate and congress
+//switch between senate and congress  ---> Need to refactor this and pass everything from builPagetext
  
 const currentURL = window.location.href;
  
 
-if (currentURL.includes("congress.html")){
+if (currentURL.includes("chamber=house")){
  
   url = url_congress;
 }
 
-else if(currentURL.includes("senate.html")){
+else if(currentURL.includes("chamber=senate") || currentURL.includes("members.html")){
  
   url = url_senate;
 }
@@ -84,8 +84,7 @@ else if(currentURL.includes("senate.html")){
     const data = await response.json();
      //console.log(data.results[0].members);
      return data;
-    //first_name;
-    buildTable(data);
+     
   } catch (error) {
     console.log(error);
   }
@@ -160,7 +159,7 @@ const filterByState = (k = "") =>{
  
       data = await fetchData();
       //console.log(newArr);
-      
+
       buildTable(data.results[0].members);
  
    
