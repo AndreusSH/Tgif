@@ -1,3 +1,7 @@
+import {buildTable} from './buildTable.mjs';
+import { filterByParty} from './filter.mjs';
+import { getStatistics } from './getStatistics.mjs';
+
 const url_senate = "./json/senate.json";
 const url_congress = "./json/congress.json";
  
@@ -6,14 +10,6 @@ let data;
 let newArr = [];
  
 let url = "";
-let statistics = {};
-
-
-
-import{buildTable} from './buildTable.mjs';
-import { filterByParty} from './filter.mjs';
-
-
 
 
 
@@ -43,6 +39,7 @@ else if(currentURL.includes("chamber=senate") || currentURL.includes("members.ht
   try {
     const response = await fetch(url);
     const data = await response.json();
+    //console.log (data);
       return data;
      
   } catch (error) {
@@ -65,6 +62,18 @@ for (let i = 0; i < elements.length; i++) {
 }
 
  
+
+
       data = await fetchData();
       export {data};
-      buildTable(data.results[0].members);
+      const destructuredData = data.results[0].members;
+      
+ 
+    
+      if(currentURL.includes("members.html")){
+        buildTable(destructuredData);
+      }
+
+      else if(currentURL.includes("attendance.html")){
+         getStatistics(destructuredData);
+      }

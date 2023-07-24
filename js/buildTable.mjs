@@ -3,11 +3,11 @@
 //buildtable function creates a table with senators and congressmen data
 
 export const buildTable =  (arr) => {
- 
+   //console.log(arr,'data1')
     document.getElementById("header").innerHTML = ""; 
      let table = document.getElementById("header");
        
- 
+  
   //loop through all members of the chamber or senate
   for (let i = 0 ; i < arr.length; i++){
      

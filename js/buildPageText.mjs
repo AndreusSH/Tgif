@@ -30,5 +30,14 @@ else if(currentURL.includes("chamber=senate") || currentURL.includes("members.ht
 
   };
 
-insertText();
-fetchData();
+
+  if(currentURL.includes("members.html")){
+    insertText();
+    fetchData();
+  }
+
+  else if(currentURL.includes("attendance.html")){
+    fetchData();
+  }
+
+

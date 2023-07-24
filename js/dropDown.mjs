@@ -5,7 +5,7 @@ import {filterByState} from './filter.mjs';
 let state_key = "";
 
  
-//function which populates dropdown
+//function which populates dropdown with the states
 function populateDropdown() {
     document.getElementById('states').innerHTML= "";
    
@@ -37,12 +37,19 @@ function populateDropdown() {
        })
     }
   }
-  
+  const currentURL = window.location.href;
+ 
+
+ if( currentURL.includes("members.html")){
+ 
   document.addEventListener('DOMContentLoaded', function () {
     const dropdownButton = document.getElementById('dynamicDropdown');
     dropdownButton.addEventListener('click', function () {
-      console.log('does it work?')
-      populateDropdown();
+       populateDropdown();
     });
   });
+}
+ 
+
+
   export {state_key};
