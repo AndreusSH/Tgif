@@ -27,8 +27,12 @@
      
 }
 
+
+
+
 body {
     font-family: "Special Elite", cursive;
+    
  }
 
  footer{
@@ -48,3 +52,17 @@ body {
     padding-right: 30px;
      
   }
+  table, th, td {
+    border: 1px solid #3498DB;
+    border-collapse: collapse;
+    padding: 5px, 5px, 5px, 5px;
+    text-align: center;
+  
+  }
+
+ 
+
+ .row{
+    padding-top: 15px;
+ }
+
