@@ -47,47 +47,39 @@
           
               <li class="nav-item">
                 <a class="nav-link" href="members.html">Congress 113</a>
-              </li>
-             
-                <div class="dropdown show"  >
-                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Attendance        </a>
-      
-            <div id= "myDropdown" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="attendance.html?chamber=house">House</a>
-              <a class="dropdown-item" href="attendance.html?chamber=senate">Senate</a>
-             </div>
-          </div>
-        </li>
-       
+           
         <li class="nav-item">
-          <a class="nav-link" href="loyalty.html">Party Loyalty</a>
+            <a class="nav-link" href="attendance.html">Attendance</a>
+          </li>
+           
+       
         </li>
+             
+        <div class="dropdown show" >
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Party Loyalty       </a>
+
+    <div id= "myDropdown" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item" href="loyalty.html?chamber=house">House</a>
+      <a class="dropdown-item" href="loyalty.html?chamber=senate">Senate</a>
+     </div>
+  </div>
+</li>
+
          
         </ul>
       </div>
     </nav>
     <div class="container">
          <!-- Create a row with two columns -->
-        <div class="row ">
+        <div class="row">
            <div class="col-md-6">
-             <h1>Attendance</h1>
-
+            <h1>Party Loyalty</h1>
             <p>
-              
-              The Constitution specifies that a majority of members constitutes a quorum 
-              to do business in each house. Representatives and senators rarely force the 
-              presence of a quorum by demanding quorum calls; thus, in most cases, debates 
-              continue even if a majority is not present.
-            </p>
-      
-            <p>The Senate uses roll-call votes; a clerk calls out the names of all the 
-              senators, each senator stating "aye" or "no" when his or her name is announced.
-              The House reserves roll-call votes for the most formal matters, as a roll-call
-              of all 435 representatives takes quite some time; normally, members vote by
-              electronic device. In the case of a tie, the motion in question fails. In the Senate,
-              the Vice President may (if present) cast the tiebreaking vote.
-            </p>
+              Those who consider themselves to be strong partisans, strong Democrats 
+              and strong Republicans respectively, tend to be the most faithful in 
+              voting for their party's nominee for office and legislation that backs 
+              their party's agenda. </p>
             
            
           </div>
@@ -119,6 +111,11 @@
                   <td id = "n_independent">--</td>
                   <td id ="perc_ind">--</td>
                 </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id = "n_total">--</td>
+                    <td id ="perc_total">--</td>
+                  </tr>
               </tbody>
             </table>
           </div>
@@ -129,13 +126,13 @@
       <div class="row">
         <div class="col-md-6">
          
-      <h2>Least Engaged (Bottom 10% Attendance)</h2>
+      <h2>Least Loyal (Bottom 10% of Party)</h2>
       <table>
         <thead>
           <tr>
             <th>Name</th>
-            <th>Number of Missed Votes</th>
-            <th>% Missed</th>
+            <th>Number Party Votes</th>
+            <th>% Party Votes</th>
           </tr>
         </thead>
         <tbody id="table-body2">
@@ -151,13 +148,13 @@
  
        <!-- Second column (col-md-6 means it will take 6 out of 12 columns on medium and larger screens) -->
        <div class="col-md-6 custom-column">
-        <h2>Most Engaged (Top 10% Attendance)</h2>
+        <h2>Most Loyal (Top 10% of Party)</h2>
         <table>
           <thead>
             <tr>
               <th>Name</th>
-              <th>Number of Missed Votes</th>
-              <th>% Missed</th>
+              <th>Number Party Votes</th>
+              <th>% Party Votes</th>
             </tr>
           </thead>
           <tbody id="table-body">
@@ -182,10 +179,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/fetchData.mjs" type="module"></script>
-    <script src="js/states.mjs" type="module"></script>
-    <script src="js/buildPageText.mjs" type="module"></script>
-    <script src="js/dropDown.mjs" type="module"></script>
-     <script src = "js/displayAttendance.mjs" type = "module"></script>     
+        
 
      
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
