@@ -67,7 +67,8 @@ for (let d of data){
 rep_perc= rep_perc/republicans;
 dem_perc = dem_perc/democrats;
 
-ind_perc =ind_perc/independents ;
+ind_perc = isNaN(ind_perc/independents) ?  0 : ind_perc/independents ;
+ 
 changeChamber();
 display(republicans, democrats, independents);
 
