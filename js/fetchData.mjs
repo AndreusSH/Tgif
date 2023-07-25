@@ -23,7 +23,7 @@ if (currentURL.includes("chamber=house")){
   url = url_congress;
 }
 
-else if(currentURL.includes("chamber=senate") || currentURL.includes("members.html")){
+else if(currentURL.includes("chamber=senate") || currentURL.includes("members.html") ||currentURL.includes("attendance.html")||currentURL.includes("loyalty.html")){
  
   url = url_senate;
 }
@@ -66,14 +66,15 @@ for (let i = 0; i < elements.length; i++) {
 
       data = await fetchData();
       export {data};
+      console.log(data);
       const destructuredData = data.results[0].members;
       
  
     
-      if(currentURL.includes("members.html")){
+      if(currentURL.includes("members.html") ){
         buildTable(destructuredData);
       }
 
-      else if(currentURL.includes("attendance.html")){
+      else if(currentURL.includes("attendance.html") || currentURL.includes("loyalty.html") ){
          getStatistics(destructuredData);
       }
