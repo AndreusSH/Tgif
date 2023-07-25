@@ -9,7 +9,7 @@ if (currentURL.includes("chamber=house")){
   chamber.innerText = "House of Representatives at a glance";
 }
 
-else if(currentURL.includes("chamber=senate") || currentURL.includes("members.html")){
+else if(currentURL.includes("chamber=senate") || currentURL.includes("members.html") || currentURL.includes("attendance.html")|| currentURL.includes("loyalty.html")){
  
     chamber.innerText = "Senate at a glance";
 }
