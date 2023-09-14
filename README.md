@@ -1,5 +1,6 @@
 ﻿# Tgif
 ## What does it do?
-Website that display US Senators and house representatives with the possibility to use multiple filters and aggregates data about their attendace.
+Website that display US Senators and House representatives with the possibility to use multiple filters and aggregates data about their attendace.
 ### Technologies used
-Bootstap + Javascript 
+Bootstap + Vanilla Javascript 
+![TGIF App demo](Tgif/TGIF (1).gif)
