@@ -4,7 +4,7 @@
 
 TGIF is a web application that provides information about US Senators and House representatives. It allows users to filter and aggregate attendance data for these legislators.
 
-![TGIF App Demo](TGIF (1).gif)
+![TGIF App Demo](TGIF.gif)
 
 ## Features
 
